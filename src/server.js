@@ -1,7 +1,7 @@
-import http from 'node:http'
+import http from "node:http"
 
-import { jsonHandler } from './middlewares/jsonHandler.js'  
-import { routerHandler } from './middlewares/routeHandler.js'
+import { jsonHandler } from "./middlewares/jsonHandler.js"  
+import { routerHandler } from "./middlewares/routeHandler.js"
 
 async function listener(request, response) {
   await jsonHandler(request, response)
