@@ -5,7 +5,7 @@ const database = new Database()
 
 export function routerHandler(request, response) {
   const route = routes.find((route) => {
-    return request.method === route.method && request.url === route.path
+    return request.method === route.method && route.path.test(request.url) 
   })
 
   if (route) {
